@@ -1,0 +1,20 @@
+{
+  "name": "acesso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass css/main.scss:css/main.css -t compressed",
+    "sass": "nodemon -e scss -x \"npm run build-css\"",
+    "build-js": "uglifyjs bower/jquery/dist/jquery.js js/scripts.js -o js/scripts.min.js -c",
+    "js": "nodemon -e js -x \"npm run build-js\""
+  },
+  "author": "Felipe A",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.9.0",
+    "nodemon": "^1.11.0",
+    "sass": "^0.5.0",
+    "uglify-js": "^2.7.5"
+  }
+}
