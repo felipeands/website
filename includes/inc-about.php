@@ -40,7 +40,7 @@
             As autodidact I love to learn. <i class="fa fa-heart love" aria-hidden="true"></i>
           </p>
           <p>
-            If you believe that we can build something great together, <a href="#">let me know!</a>
+            If you believe that we can build something great together, <a href="#contact">let me know!</a>
           </p>
 
         </div>

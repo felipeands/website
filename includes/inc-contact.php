@@ -15,9 +15,9 @@
 
       <div class="column contacts">
         <ul>
-        <li><i class="fa fa-envelope"></i> <span>felipe.andrada [a] gmail.com</span></li>
-        <li><i class="fa fa-whatsapp"></i> <span>+55 (62) 98131-3439</span></li>
-        <li><i class="fa fa-skype"></i> <span>felipeandrada</span></li>
+          <li><i class="fa fa-envelope"></i> <span>felipe.andrada [a] gmail.com</span></li>
+          <li><i class="fa fa-whatsapp"></i> <span>+55 (62) 98131-3439</span></li>
+          <li><i class="fa fa-skype"></i> <span>felipeandrada</span></li>
         </ul>
       </div>
       <!-- .column -->
