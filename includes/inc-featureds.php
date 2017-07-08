@@ -1,3 +1,10 @@
+<?php
+$count = 1;
+$posts = get_field('destaques', 'options');
+
+if ($posts):
+?>
+
 <section id="featureds">
 
   <div class="container">
@@ -6,17 +13,17 @@
 
     <div class="columns">
 
-      <?php for ($x=0; $x<3; $x++): ?>
+      <?php foreach ($posts as $key => $post): setup_postdata($post); ?>
 
       <?php get_template_part('includes/inc','project'); ?>
 
-      <?php endfor; ?>
+      <?php endforeach; ?>
 
     </div>
     <!-- .columns -->
 
     <div class="all">
-      <a class="button" href="#">See all</a>
+      <a class="button" href="<?php bloginfo('url'); ?>/projects"><?php _e('[:en]See all[:pt]Ver outros'); ?></a>
     </div>
 
   </div>
@@ -24,3 +31,6 @@
 
 </section>
 <!-- #featureds -->
+<?php
+endif;
+?>

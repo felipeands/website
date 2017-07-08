@@ -20,6 +20,13 @@ $primary: $primary_color;
 
   .avatar {
     @extend .column;
+    position: relative;
+
+    #reload {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
 
     img {
       width: 100%;
@@ -256,6 +263,8 @@ $primary: $primary_color;
     .button {
       @extend .is-primary;
       color: $secundary_color !important;
+      display: block;
+      float: right;
     }
   }
 
@@ -317,6 +326,17 @@ header {
   @extend .is-small;
 }
 
+.fa-spin-hover:hover {
+  -webkit-animation: fa-spin 2s infinite linear;
+  -moz-animation: fa-spin 2s infinite linear;
+  -o-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+
+.in {
+  display: none;
+}
+
 
 
 
@@ -367,9 +387,65 @@ header {
     }
 
     .content {
-      text-align: center;
+      text-align: justify;
+
+      a {
+        color: $secundary_color;
+        text-decoration: underline;
+      }
     }
 
+  }
+
+}
+
+
+
+
+
+
+
+
+.translate {
+  text-align: center;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    height: 15px;
+    padding-left: 30px;
+    background: no-repeat left center;
+  }
+
+  span {
+    display: none;
+  }
+
+  .active {
+    a {
+      text-decoration: underline;
+      color: #fff;
+    }
+  }
+
+  .lang-en {
+    a {
+      background-image: url('../images/en.png');
+    }
+  }
+
+  .lang-pt {
+    a {
+      background-image: url('../images/pt.png');
+    }
   }
 
 }

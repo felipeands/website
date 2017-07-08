@@ -11,13 +11,13 @@
     <nav class="breadcrumb">
       <ul>
         <li><a href="<?php echo site_url(); ?>">Home</a></li>
-        <li><a href="<?php echo site_url() ?>/projects">Projects</a></li>
-        <li><a>FeiraUP</a></li>
+        <li><a href="<?php echo site_url() ?>/projects">Jobs</a></li>
+        <li><a><?php the_title(); ?></a></li>
       </ul>
     </nav>
     <!-- .breadcrumb -->
 
-    <h2>FeiraUP</h2>
+    <h2><?php the_title(); ?></h2>
 
     <div class="content">
 

@@ -5,16 +5,17 @@
     <div class="columns">
 
       <figure class="avatar">
-        <img src="<?php bloginfo('template_url'); ?>/assets/avatars/poptocat.png" alt="Me" />
+        <a id="reload" href="javascript:void(0)"><i class="fa fa-refresh fa-spin-hover" aria-hidden="true"></i></a>
+        <img id="avatar" src="<?php bloginfo('template_url'); ?>/assets/avatars/poptocat.png" alt="Me" />
       </figure>
 
       <div class="about">
 
         <div class="author">
           <h1>
-            Hello,<br/> I am <span>Felipe Andrada</span>
+            <?php _e('[:en]Hello[:pt]Olá'); ?>,<br/> <?php _e('[:en]I am[:pt]Eu sou'); ?> <span>Felipe Andrada</span>
           </h1>
-          <h2>Frontend developer</h2>
+          <h2><?php _e('[:en]Frontend developer[:pt]Desenvolvedor frontend'); ?></h2>
         </div>
         <!-- .author -->
 

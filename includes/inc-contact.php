@@ -1,6 +1,6 @@
 <section id="contact">
 
-  <h2>CONTACT ME</h2>
+  <h2><?php _e('[:en]CONTACT ME[:pt]FALE COMIGO'); ?></h2>
 
   <div class="container">
 
@@ -8,35 +8,7 @@
 
       <div class="column form is-half">
 
-        <form method="post">
-
-          <div class="field">
-            <p class="control">
-              <input class="input" type="text" name="name" placeholder="Name">
-            </p>
-          </div>
-
-          <div class="field">
-            <p class="control">
-              <input class="input" type="email" name="email" placeholder="Email">
-            </p>
-          </div>
-
-          <div class="field">
-            <p class="control">
-              <textarea class="textarea" type="email" name="email" placeholder="Message"></textarea>
-            </p>
-          </div>
-
-          <div class="field send">
-            <p class="control">
-              <button class="button">
-                Send
-              </button>
-            </p>
-          </div>
-
-        </form>
+        <?php echo do_shortcode('[contact-form-7 id="267" title="Contact form 2017"]'); ?>
 
       </div>
       <!-- .column -->

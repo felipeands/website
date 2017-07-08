@@ -6,7 +6,7 @@
   "scripts": {
     "build-css": "sass assets/css/main.scss:assets/css/main.css -t compressed",
     "sass": "nodemon -e scss -x \"npm run build-css\"",
-    "build-js": "uglifyjs assets/bower_components/jquery/dist/jquery.js js/scripts.js -o js/scripts.min.js -c",
+    "build-js": "uglifyjs assets/js/scripts.js -o assets/js/scripts.min.js -c",
     "js": "nodemon -e js -x \"npm run build-js\""
   },
   "author": "Felipe Andrada",

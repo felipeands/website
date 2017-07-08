@@ -1,6 +1,6 @@
 <section id="technologies">
 
-  <h2>SOME COOL TECHNOLOGIES</h2>
+  <h2><?php _e('[:en]SOME COOL TECHNOLOGIES[:pt]TECNOLOGIAS UTILIZADAS'); ?></h2>
 
   <div class="items columns">
     <div class="logo ruby"><span>Ruby on Rails</span></div>
