@@ -1,4 +1,4 @@
-const reload = document.getElementById('reload');
+var reload = document.getElementById('reload');
 if (reload) {
   reload.addEventListener('click', reloardAvatar);
 }
@@ -17,8 +17,10 @@ const a = [
   'waldocat'
 ];
 
+var nI, nA;
+
 function reloardAvatar() {
-  var nI = Math.floor((Math.random() * a.length) + 1) - 1;
-  var nA = a[nI];
+  nI = Math.floor((Math.random() * a.length) + 1) - 1;
+  nA = a[nI];
   document.getElementById('avatar').src = templateUrl + '/assets/avatars/' + nA + '.png';
 }
