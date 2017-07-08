@@ -16,5 +16,8 @@
     "test",
     "tests"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "bulma": "^0.4.3",
+    "font-awesome": "^4.7.0"
+  }
 }

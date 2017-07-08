@@ -1,34 +1,41 @@
-<?php get_header(); ?>
-
-<?php the_post(); ?>
+<?php 
+/*
+ * Template Name: Projects page
+ * Template Post Type: page
+ */
+ ?><?php get_header(); ?>
 
 <?php get_template_part('includes/inc','header'); ?>
 
-<article id="project">
+<section id="projects">
 
   <div class="container">
 
     <nav class="breadcrumb">
       <ul>
         <li><a href="<?php echo site_url(); ?>">Home</a></li>
-        <li><a href="<?php echo site_url() ?>/projects">Projects</a></li>
-        <li><a>FeiraUP</a></li>
+        <li><a>Projects</a></li>
       </ul>
     </nav>
     <!-- .breadcrumb -->
 
-    <h2>FeiraUP</h2>
+    <h2>Projects</h2>
 
-    <div class="content">
+    <div class="columns">
 
-      <?php the_content(); ?>
-    
+    <?php for ($x=0; $x<20; $x++): ?>
+
+      <?php get_template_part('includes/inc','project'); ?>
+
+    <?php endfor; ?>
+
     </div>
+    <!-- .columns -->
 
   </div>
   <!-- .container -->
 
-</article>
+</section>
 <!-- #projects -->
 
 <?php get_template_part('includes/inc','contact'); ?>
