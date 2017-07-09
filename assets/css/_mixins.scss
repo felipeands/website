@@ -1,0 +1,34 @@
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 767px) { @content; }
+  }
+
+  @else if $class == sm {
+    @media (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+
+  @else if $class == md {
+    @media (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @else if $class == xl {
+    @media (min-width: 1410px) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+@mixin antialiasing() {
+  -webkit-font-smoothing: antialiased;
+  khtml-font-smoothing: antialiased;
+  apple-font-smoothing: antialiased;
+}
+
+.no-pl { padding-left: 0 !important; }
+.no-pr { padding-right: 0 !important; }

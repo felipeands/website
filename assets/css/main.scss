@@ -8,7 +8,7 @@ $primary: $primary_color;
 
 @import '../bower_components/bulma/bulma';
 @import '../bower_components/font-awesome/scss/font-awesome';
-
+@import 'mixins';
 
 
 
@@ -26,6 +26,7 @@ $primary: $primary_color;
       position: absolute;
       bottom: 0;
       left: 0;
+      border-radius: 50%;
     }
 
     img {
@@ -37,6 +38,16 @@ $primary: $primary_color;
     @extend .column;
     @extend .is-two-thirds;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+
+    .love {
+      vertical-align: text-top;
+      color: #e60000;
+    }
+
+    a {
+      color: $secundary_color;
+      text-decoration: underline;
+    }
   }
 
   .author {
@@ -57,16 +68,6 @@ $primary: $primary_color;
       font-weight: bold;
     }
 
-  }
-
-  .love {
-    vertical-align: text-top;
-    color: #e60000;
-  }
-
-  a {
-    color: $secundary_color;
-    text-decoration: underline;
   }
 
 }
@@ -121,8 +122,13 @@ $primary: $primary_color;
     margin-bottom: 50px !important;
   }
 
+  .columns {
+    @extend .is-multiline;
+  }
+
   .logo {
     @extend .column;
+    @extend .is-half-mobile;
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center;
@@ -132,14 +138,16 @@ $primary: $primary_color;
     height: 90px;
     margin-bottom: 15px;
 
-    -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-    -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-    -webkit-filter: grayscale(100%);
-    filter: gray;
-    transition: 0.3s all;
+    @include breakpoint(lg) {
+      -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+      -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+      -webkit-filter: grayscale(100%);
+      filter: gray;
+      transition: 0.3s all;
 
-    &:hover {
-      filter: none;
+      &:hover {
+        filter: none;
+      }
     }
 
     span {
@@ -209,18 +217,22 @@ $primary: $primary_color;
 .card.job {
   font-size: 0.8em;  
 
-  img {
-    -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-    -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-    -webkit-filter: grayscale(100%);
-    filter: gray;
-    transition: 0.3s all;
+  @include breakpoint(lg) {
+    img {
+      -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+      -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+      -webkit-filter: grayscale(100%);
+      filter: gray;
+      transition: 0.3s all;
+    }
   }
 
   &:hover {
 
-    img {
-      filter: none;
+    @include breakpoint(lg) {
+      img {
+        filter: none;
+      }
     }
 
     a {
@@ -345,17 +357,6 @@ header {
   @extend .is-small;
 }
 
-.fa-spin-hover:hover {
-  -webkit-animation: fa-spin 2s infinite linear;
-  -moz-animation: fa-spin 2s infinite linear;
-  -o-animation: fa-spin 2s infinite linear;
-  animation: fa-spin 2s infinite linear;
-}
-
-.in {
-  display: none;
-}
-
 
 
 
@@ -405,12 +406,20 @@ header {
       margin-bottom: 50px !important;
     }
 
+    #technologies {
+      display: none;
+    }
+
     .content {
       text-align: justify;
 
       a {
         color: $secundary_color;
         text-decoration: underline;
+      }
+
+      img {
+        height: auto;
       }
     }
 

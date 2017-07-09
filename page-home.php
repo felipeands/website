@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php the_post(); ?>
+
 <?php get_template_part('includes/inc','about'); ?>
 
 <?php get_template_part('includes/inc','tags'); ?>
